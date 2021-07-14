@@ -39,6 +39,8 @@ function Login(){
                 )
                 if(user.user_type==='Student'){
                     history.push('/studentdashboard')
+                }else if(user.user_type==='CDC'){
+                    history.push('/cdcdashboard')
                 }else{
                     history.push('/')
                 }
@@ -53,12 +55,12 @@ function Login(){
 
     return(
         <>
-        <div className="d-flex justify-content-center align-items-center fontstyle bodycss" style={{height:'80%'}}>
+        <div className="d-flex justify-content-center align-items-center fontstyle bodycss" style={{height:'93%'}}>
             <div className="container" style={{marginRight: "50%",marginLeft: "50%"}}>
                 <div className="card carddesign formround" style={{minWidth: "30rem",backgroundColor: "rgba(255, 255, 255, 0.4)",borderRadius: "3rem"}}>
                     <div className="p-4">
                         <form>
-                            <h1 className="text-white">&nbsp;LogIn</h1>
+                            <h1 className="text-black">&nbsp;LogIn</h1>
                             <div className="form-group">
                             <input type="email" className="form-control form-round" id="exampleInputEmail1" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter email"/>
                             </div>

@@ -56,7 +56,7 @@ console.log(profileInfo)
                                     </Card.Text>
                                 </Card.Body>
                                 :null}
-                                <Card.Footer className="text-muted">GMIT HR</Card.Footer>
+                                <Card.Footer className="text-muted">GMITFinder</Card.Footer>
                             </Card>
                         </Col>
                     </Row>

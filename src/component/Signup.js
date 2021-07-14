@@ -13,6 +13,7 @@ function Signup(){
     const [userType,setUserType]=useState()
     const [password,setPassword]=useState()
     const [confirmPassword,setConfirmPassword]=useState()
+    const [message,setMessage]=useState()
     //console.log([name,phone,email,dateOfBirth,gender,userType,password,confirmPassword])
     const history = useHistory()
 
@@ -28,8 +29,13 @@ function Signup(){
             gender:gender,
             dob:dateOfBirth
         }).then((response)=>{
-            console.log(response)
-            history.push('/login')
+            if (response.data.message) {
+                setMessage(response.data.message)
+            }else{
+                console.log(response)
+                history.push('/login')
+            }
+            
         })
     }
 
@@ -41,7 +47,7 @@ function Signup(){
                     <div className="card carddesign formround" style={{width: "30rem",backgroundColor: "rgba(255, 255, 255, 0.4)",borderRadius: "3rem"}}>
                         <div className="p-4">
                             <form>
-                                <h1 className="text-white">&nbsp;<i className="fa fa-user" aria-hidden="true"></i>&nbsp; SignUp</h1>
+                                <h1 className="text-black">&nbsp;<i className="fa fa-user" aria-hidden="true"></i>&nbsp; SignUp</h1>
                                 <div className="form-group">
                                     <input type="text" className="rounded-pill form-control form-round" id="exampleInputname1" aria-describedby="nameHelp" onChange={(e)=>{setName(e.target.value)}} placeholder="Enter name"/>
                                 </div>
@@ -52,7 +58,7 @@ function Signup(){
                                 <input type="email" className="rounded-pill form-control form-round" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter email"/>
                                 </div>
                                 <div className="form-group">
-                                    <label className="text-white">&nbsp; Date of Birth:</label>
+                                    <label className="text-black">&nbsp;<b> Date of Birth:</b></label>
                                 <input type="date" onChange={(e)=>{setDateOfBirth(e.target.value)}} className="rounded-pill form-control form-round" id="exampleInputdate1" aria-describedby="" placeholder=""/>
                                 </div>
                                 <div className="form-group">
@@ -77,6 +83,7 @@ function Signup(){
                                 <div className="form-group">
                                 <input type="password" className="rounded-pill form-control form-round" id="exampleInputConfPassword1" onChange={(e)=>{setConfirmPassword(e.target.value)}} placeholder="Confirm Password"/>
                                 </div>
+                                <h5 className='text-white'>{message}</h5>
                                 <button type="submit" className="btn btn-primary btn-block rounded-pill form-round" onClick={(e)=>{handleSignup(e)}}
                                 disabled={name&&phone&&email&&dateOfBirth&&gender&&userType&&password&&confirmPassword?false:true}
                                 >SignUp</button>

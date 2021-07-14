@@ -28,15 +28,15 @@ function ProfileCard(props){
         {userdata?<Link to={`/profileviewer/${userdata.id}`} style={{textDecoration: 'none',color: 'inherit'}}>
             <div className="card mb-3" >
                 {userdata?<div className="row no-gutters">
-                    <div className="col-md-3 text-center">
-                        <img src="" alt="..." width='100%'/>
+                    <div className="col-md-1 text-center bg-info">
+                        
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-11">
                         <div className="card-body">
                             <h5 className="card-title">{userdata.name}</h5>
                             <p className="card-text">{userdata.email}</p>
                             <p className="card-text">{userdata.phone}</p>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 className="card-text">According to your search we found <b>{props.skill}</b> as result</h5>
                         </div>
                     </div>
                 </div>:null}

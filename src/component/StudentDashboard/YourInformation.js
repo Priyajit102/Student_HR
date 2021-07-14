@@ -31,7 +31,6 @@ function YourInformation(props) {
             }
             ).then((dbData)=>{
                 setAcademicInfo(dbData.data)
-                console.log(dbData.data)
                 
             })
         }
@@ -43,7 +42,6 @@ function YourInformation(props) {
             }
             ).then((dbData)=>{
                 setSkillInfo(dbData.data)
-                console.log({skill:dbData})
                 
             })
         }
@@ -54,7 +52,6 @@ function YourInformation(props) {
             }
             ).then((dbData)=>{
                 setAchievementInfo(dbData.data)
-                console.log({achiv:dbData})
                 
             })
         }
@@ -65,7 +62,6 @@ function YourInformation(props) {
             }
             ).then((dbData)=>{
                 setProjectInfo(dbData.data)
-                console.log({proj:dbData})
                 
             })
         }
@@ -83,7 +79,7 @@ function YourInformation(props) {
         <Container fluid>
            { profileInfo?<>
            <Row className="d-flex justify-content-center py-3">
-                <h3 style={{backgroundColor:"#2c2a88",color:"white"}} className="d-flex justify-content-center w-100">Web CV</h3>
+                <h3 style={{backgroundColor:"#2c2a88",color:"white"}} className="d-flex justify-content-center w-100">Your Resume</h3>
             </Row>
             <Row className="d-flex justify-content-center p-3">
                 <Col md="6" className="d-flex justify-content-center ">
@@ -116,10 +112,11 @@ function YourInformation(props) {
             <Table responsive striped borderless hover>
             <thead>
                 <tr>
-                <th>Collage/School Name</th>
-                <th>Year</th>
-                <th>Qualification</th>
-                <th>Description</th>
+                <th>Examination Name</th>
+                <th>Organization Name</th>
+                <th>Marks</th>
+                <th>Starting Date</th>
+                <th>Ending Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -131,7 +128,8 @@ function YourInformation(props) {
                                 <tr key={index}>
                                     <td>{result.degree}</td>
                                     <td>{result.org_name}</td>
-                                    <td>{((result.start_date).split("T"))[0]}</td>
+                                    <td>{result.marks}</td>
+                                    <td>{result.start_date?((result.start_date).split("T"))[0]:null}</td>
                                     <td>{((result.end_date).split("T"))[0]}</td>
                                    
                                 </tr>
@@ -151,10 +149,7 @@ function YourInformation(props) {
             <thead>
                 <tr>
                 <th>Skill Name</th>
-                <th>Organisation name</th>
                 <th>Learned In</th>
-                <th>Description</th>
-                
                 </tr>
             </thead>
             <tbody>
@@ -221,7 +216,8 @@ function YourInformation(props) {
                 <th>Description</th>
                 <th>Project Link</th>
                 <th>Git Link</th>
-                <th>Year</th>
+                <th>Start Date</th>
+                <th>End Date</th>
                 </tr>
             </thead>
             <tbody>

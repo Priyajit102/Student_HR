@@ -18,7 +18,7 @@ function Navbars() {
     return(
         <>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{minHeight:'7%'}}>
-                <Navbar.Brand className='fontstyle'>GMIT HR</Navbar.Brand>
+                <Navbar.Brand className='fontstyle'><h2><b>GMIT HR</b></h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto"></Nav>
@@ -29,7 +29,7 @@ function Navbars() {
                     {
                     userinfo?
                     <>
-                    <Nav.Link>
+                    <Nav.Link as={Link} to="/studentdashboard">
                         {userinfo.name}
                     </Nav.Link>
                     <Button className='rounded-pill' size="sm" onClick={()=>{handleLogout()}}>Logout</Button>
@@ -37,11 +37,14 @@ function Navbars() {
                     :
                     <>
                     <Nav.Link className='unav' as={Link} to="/login">
-                        LogIn
+                    <i className='fa fa-sign-in'></i>
+                      <b>LogIn</b>
+                       
                     </Nav.Link>
                     <Nav.Link className='unav' as={Link} to="/signup">
-                        SignUp
-                    </Nav.Link>
+                    <i className='fa fa-user-plus'></i>
+                       <b>SignUp</b>
+                        </Nav.Link>
                     </>}
                     </Nav>
                 </Navbar.Collapse>

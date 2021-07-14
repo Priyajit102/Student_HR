@@ -31,7 +31,7 @@ function ProfileViewer(){
         }
         ).then((dbData)=>{
             setAcademicInfo(dbData.data)
-            console.log(dbData.data)
+           
             
         })
     }
@@ -43,7 +43,7 @@ function ProfileViewer(){
         }
         ).then((dbData)=>{
             setSkillInfo(dbData.data)
-            console.log({skill:dbData})
+           
             
         })
     }
@@ -54,7 +54,7 @@ function ProfileViewer(){
         }
         ).then((dbData)=>{
             setAchievementInfo(dbData.data)
-            console.log({achiv:dbData})
+           
             
         })
     }
@@ -65,7 +65,6 @@ function ProfileViewer(){
         }
         ).then((dbData)=>{
             setProjectInfo(dbData.data)
-            console.log({proj:dbData})
             
         })
     }
@@ -79,7 +78,6 @@ function ProfileViewer(){
    }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
-console.log(profileInfo)
     return(
         <>
             <div className="fontstyle bodycss p-2" style={{minHeight:"93%"}}>
@@ -88,7 +86,7 @@ console.log(profileInfo)
                     profileInfo
                     ?<>
                         <Row className="d-flex justify-content-center py-3">
-                            <h3 style={{backgroundColor:"#2c2a88",color:"white"}} className="d-flex justify-content-center w-100">Web CV</h3>
+                            <h3 style={{backgroundColor:"#2c2a88",color:"white"}} className="d-flex justify-content-center w-100">Your Resume</h3>
                         </Row>
                         <Row className="d-flex justify-content-center p-3">
                             <Col md="6" className="d-flex justify-content-center ">
@@ -136,7 +134,7 @@ console.log(profileInfo)
                                 <tr key={index}>
                                     <td>{result.degree}</td>
                                     <td>{result.org_name}</td>
-                                    <td>{((result.start_date).split("T"))[0]}</td>
+                                    <td>{result.start_date?((result.start_date).split("T"))[0]:null}</td>
                                     <td>{((result.end_date).split("T"))[0]}</td>
                                    
                                 </tr>
