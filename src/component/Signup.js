@@ -44,18 +44,18 @@ function Signup(){
         <>
             <div className="d-flex justify-content-center align-items-center fontstyle bodycss" style={{height:'93%'}}>
                 <div className="container" style={{marginRight: "50%",marginLeft: "50%"}}>
-                    <div className="card carddesign formround" style={{width: "30rem",backgroundColor: "rgba(255, 255, 255, 0.4)",borderRadius: "3rem"}}>
+                    <div className="card carddesign formround" style={{width: "30rem",backgroundColor: "rgb(0, 204, 153)",borderRadius: "0rem"}}>
                         <div className="p-4">
                             <form>
-                                <h1 className="text-black">&nbsp;<i className="fa fa-user" aria-hidden="true"></i>&nbsp; SignUp</h1>
+                                <h1 className="text-black">&nbsp;<i className="fa fa-user-plus" aria-hidden="true"></i>&nbsp; SignUp</h1>
                                 <div className="form-group">
-                                    <input type="text" className="rounded-pill form-control form-round" id="exampleInputname1" aria-describedby="nameHelp" onChange={(e)=>{setName(e.target.value)}} placeholder="Enter name"/>
+                                    <input type="text" className="rounded-pill form-control form-round" id="exampleInputname1" aria-describedby="nameHelp" onChange={(e)=>{setName(e.target.value)}} placeholder="Enter Name"/>
                                 </div>
                                 <div className="form-group">
-                                <input type="number" className="rounded-pill form-control form-round" id="exampleInputPhone1" aria-describedby="phoneHelp" onChange={(e)=>{setPhone(e.target.value)}} placeholder="Enter phone"/>
+                                <input type="number" className="rounded-pill form-control form-round" id="exampleInputPhone1" aria-describedby="phoneHelp" onChange={(e)=>{setPhone(e.target.value)}} placeholder="Enter Contact No"/>
                                 </div>
                                 <div className="form-group">
-                                <input type="email" className="rounded-pill form-control form-round" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter email"/>
+                                <input type="email" className="rounded-pill form-control form-round" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter Email"/>
                                 </div>
                                 <div className="form-group">
                                     <label className="text-black">&nbsp;<b> Date of Birth:</b></label>
@@ -74,7 +74,7 @@ function Signup(){
                                         <option value='' disabled>User Type</option>
                                         <option value='Student'>Student</option>
                                         <option value='HR'>HR</option>
-                                        <option value='Other'>Other</option>
+                                        {/* <option value='Other'>Other</option> */}
                                     </select>
                                 </div>
                                 <div className="form-group">

@@ -18,7 +18,7 @@ function Navbars() {
     return(
         <>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{minHeight:'7%'}}>
-                <Navbar.Brand className='fontstyle'><h2><b>GMIT HR</b></h2></Navbar.Brand>
+                <Navbar.Brand className='fontstyle'><h2><b>Student-HR</b></h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto"></Nav>

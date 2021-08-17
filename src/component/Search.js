@@ -13,14 +13,14 @@ return (
     <div className="d-flex justify-content-center align-items-center bodycss" style={{height: "93%" }}>
       <div className="container" >
         <div className="row d-flex justify-content-center ">
-          <h1 className="fontstyle text-white">GMIT HR</h1>
+          <h1 className="fontstyle text-black"><b>Student-HR</b></h1>
         </div>
         <div className="row">
-          <div className="search_wrap search_wrap_over fontstyle">
+          <div className="search_wrap search_wrap_around fontstyle">
             <div className="search_box">
-              <input type="text" className="input" placeholder="Skill Search..." onChange={(e)=>{setSearch(e.target.value)}} onKeyDown={(ev)=>{if (ev.key==='Enter'){history.push(`search/${search}`)}}}/>
+              <input type="text" className="input" placeholder="Enter the Skill..." onChange={(e)=>{setSearch(e.target.value)}} onKeyDown={(ev)=>{if (ev.key==='Enter'){history.push(`search/${search}`)}}}/>
               <Link to={`search/${search}`} className="btn btn_common">
-                <img src={SearchIcon} alt='SearchIcon' style={{height:'75%',paddingTop:'30%'}} />
+                <img src={SearchIcon} alt='SearchIcon' style={{height:'80%',paddingTop:'40%'}} />
               </Link>
             </div>
           </div>

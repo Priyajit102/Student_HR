@@ -57,12 +57,12 @@ function Login(){
         <>
         <div className="d-flex justify-content-center align-items-center fontstyle bodycss" style={{height:'93%'}}>
             <div className="container" style={{marginRight: "50%",marginLeft: "50%"}}>
-                <div className="card carddesign formround" style={{minWidth: "30rem",backgroundColor: "rgba(255, 255, 255, 0.4)",borderRadius: "3rem"}}>
+                <div className="card carddesign formround" style={{minWidth: "30rem",backgroundColor: "rgb(0, 204, 153)",borderRadius: "0rem"}}>
                     <div className="p-4">
                         <form>
-                            <h1 className="text-black">&nbsp;LogIn</h1>
+                            <h1 className="text-black">&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;LogIn</h1>
                             <div className="form-group">
-                            <input type="email" className="form-control form-round" id="exampleInputEmail1" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter email"/>
+                            <input type="email" className="form-control form-round" id="exampleInputEmail1" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter Email"/>
                             </div>
                             <div className="form-group">
                             <input type="password" className="form-control form-round" id="exampleInputPassword1" onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password"/>

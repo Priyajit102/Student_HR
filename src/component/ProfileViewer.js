@@ -90,7 +90,7 @@ function ProfileViewer(){
                         </Row>
                         <Row className="d-flex justify-content-center p-3">
                             <Col md="6" className="d-flex justify-content-center ">
-                                <h4>{profileInfo.name}</h4>
+                                <h1><b>{profileInfo.name}</b></h1>
                             </Col>
                             <Col md="6" className="#2c2a88">
                                 
